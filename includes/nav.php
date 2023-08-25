@@ -10,7 +10,7 @@
                     <a class="nav-link" href="/TD5">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/src/post/index.php">Posts</a>
+                    <a class="nav-link" href="/TD5/src/post/add_post.php">+Post</a>
                 </li>
             </ul>
         </div>

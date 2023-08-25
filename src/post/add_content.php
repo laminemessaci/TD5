@@ -14,7 +14,7 @@ try {
 
         // Vérification si un fichier a été téléchargé
         if (isset($_FILES["image"]) && $_FILES["image"]["error"] == 0) {
-            $target_dir = '../../photos';
+            $target_dir = '../../photos/';
             $target_file = $target_dir . basename($_FILES["image"]["name"]);
             $path = pathinfo($_FILES["image"]["name"]);
             $filename = $path['filename'];
@@ -65,6 +65,8 @@ try {
             . $message .
             '<hr
             </div>
+
+              <a href="add_content.php">Retur à la page d\'insertion </a>
         </div>';
     };
 
