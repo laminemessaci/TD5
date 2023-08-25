@@ -34,7 +34,7 @@ require_once(__DIR__ . '/../../src/post/add_content.php');
         <input type="submit" value="Envoyer">
     </form>
 
-    <a href="liste_blogs.php">Voir la liste des blogs</a>
+    <a href="/TD5">Voir la liste des blogs</a>
 </body>
 
 </html>

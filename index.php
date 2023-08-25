@@ -88,6 +88,7 @@ require_once(__DIR__ . '/src/post/add_content.php');
                     </div>
                 </div>
 
+
                 <!-- Inclure les fichiers JavaScript de Bootstrap 4 -->
                 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -98,27 +99,7 @@ require_once(__DIR__ . '/src/post/add_content.php');
             </html>
 
 
-            <!-- Inclure les fichiers JavaScript de Bootstrap 4 -->
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
         </body>
 
         </html>
-
-
-        <!-- Inclure les fichiers JavaScript de Bootstrap 4 -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-    </body>
-
-    </html>
-
-
-
-</body>
-
-</html>
