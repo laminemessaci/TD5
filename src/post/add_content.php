@@ -4,14 +4,7 @@
 // echo $cheminDossierParent;
 require_once __DIR__ . '\..\..\config\db_connect.php';
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "posts";
 $message = "";
-
-
-
 
 try {
 
@@ -23,6 +16,9 @@ try {
         if (isset($_FILES["image"]) && $_FILES["image"]["error"] == 0) {
             $target_dir = '../../photos';
             $target_file = $target_dir . basename($_FILES["image"]["name"]);
+            $path = pathinfo($_FILES["image"]["name"]);
+            $filename = $path['filename'];
+            $ext = $path['extension'];
 
             // Déplacer le fichier téléchargé vers le dossier "photos"
             if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
@@ -33,7 +29,7 @@ try {
                 $stmt->bindParam(':image_path', $target_file);
 
                 if ($stmt->execute()) {
-                    $message = "Contenu ajouté avec succès!";
+                    $message = "Aucune erreur dans le transfert du fichier. <br> Le fichier $filename.$ext  à été copié dansle repertoire photos !";
                 } else {
                     $message = "Erreur lors de l'ajout du contenu.";
                 }
@@ -47,8 +43,6 @@ try {
 } catch (PDOException $e) {
     $message = "Erreur de connexion à la base de données : " . $e->getMessage();
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -67,11 +61,9 @@ try {
     <?php if ($message != '') {
         echo ' <div class="container mt-5">
             <div class="alert alert-success" role="alert">
-                <h4 class="alert-heading">Poste ajouté avec succès!</h4>
-
-                <? $message ?>
-                <hr>
-              
+                <h4 class="alert-heading">Poste ajouté avec succès!</h4>'
+            . $message .
+            '<hr
             </div>
         </div>';
     };
